@@ -1,0 +1,180 @@
+<section id="new_routine">
+			<header data-title="" class="language" id="language_new_routine_header_title"> 
+				<nav>
+					<a href="#aside" data-router="aside" data-icon="menu"></a>
+				</nav>
+			</header>
+		    <article id="form-normal" class="active">		        
+			
+			<div class="form">
+					<p id="new_routine_details_p"class="language"></p>
+					
+						<fieldset>
+							<label class="language" id="language_show_routine_name"></label>
+							<input type="text" id="new_routine_name" value=""/>
+						</fieldset>
+						<fieldset>
+							<label class="language" id="language_show_routine_done_by"></label>
+							<input type="text" id="new_routine_done_by" value=""/>
+						</fieldset>		            
+						<fieldset>
+							<label class="language" id="language_show_routine_from"></label>
+							<input type="text" id="new_routine_from" value=""/>
+						</fieldset>		  
+						<fieldset>
+							<label class="language" id="language_show_routine_to"></label>
+							<input type="text" id="new_routine_to" value=""/>
+						</fieldset>	
+						<fieldset>
+							<label class="language" id="language_show_routine_description"></label>
+							<input type="text" id="new_routine_description" value=""/>
+						</fieldset>						
+					
+					</div>
+
+			<a class="button language" id="language_new_routine_next_button" onclick="storeNewRoutineStep1();"></a>				
+				
+		    </article>
+		</section>
+
+		
+<section id="new_routine_step_2">
+			<header data-title="" class="language" id="language_new_routine_header_title"> 
+				<nav>
+					<a href="#aside" data-router="aside" data-icon="menu"></a>
+				</nav>
+			</header>
+		    <article id="form-normal" class="active">		        
+			
+			<div class="form">
+				<a class="button language" id="language_new_routine_add_exercise" data-icon="plus" data-router="section" href="#new_exercise"></a>				
+				<br>
+				<p class="language" id="language_new_routine_exercises"></p>							
+				<ul id="language_new_routine_exercises_list">
+					
+				</ul>
+			</div>
+
+			<a class="button language" id="language_new_routine_back_button" href="#new_routine" data-router="section"></a>
+			
+			<a class="button language" id="language_new_routine_end_button" onclick="storeNewRoutineEnd();"></a>				
+						
+		    </article>
+		</section>		
+		
+		
+<section id="new_exercise">
+			<header data-title="" class="language" id="language_new_routine_header_title"> 
+				<nav>
+					<a href="#aside" data-router="aside" data-icon="menu"></a>
+				</nav>
+			</header>
+		    <article id="form-normal" class="active">		        
+			
+			<div class="form">
+						<fieldset>
+							<label class="language" id="language_add_exercise_name"></label>
+							<input type="text" id="add_exercise_name" value=""/>
+						</fieldset>
+						<fieldset>
+							<label class="language" id="language_add_exercise_description"></label>
+							<input type="text" id="add_exercise_description" value=""/>
+						</fieldset>		            
+						<fieldset>
+							<label class="language" id="language_add_exercise_recover_from"></label>
+							<input type="text" id="add_exercise_recover_from" value=""/>
+						</fieldset>		
+						<fieldset>
+							<label class="language" id="language_add_exercise_recover_to"></label>
+							<input type="text" id="add_exercise_recover_to" value=""/>
+						</fieldset>								
+						
+			</div>
+			
+			<input type="radio" name="group" value="percentage" id="language_add_exercise_percentage_radio"><p class="language" id="language_add_exercise_percentage"></p>
+			<input type="radio" name="group" value="manual" id="language_add_exercise_manual_radio"><p class="language" id="language_add_exercise_manual"></p>
+			
+			<div id="new_exercise_percentage_div" style="display:none;">
+				<p class="language" id="add_exercise_percetnage_label"> Percentage </p>
+				<div class="form">
+					<fieldset>
+						<label class="language" id="language_add_serie_percetnage_initial_kg"></label>
+						<input type="text" id="add_serie_percentage_kg" value=""/>
+					</fieldset>
+					<p> Series </p>
+					<a class="button language" id="language_new_exercise_percentage_add_serie" href="#new_percentage_serie" data-router="section"></a>	
+					<fieldset>
+						<label class="language" id="language_add_serie_percetnage_comments"></label>
+						<input type="text" id="add_serie_percentage_comments" value=""/>
+					</fieldset>
+				</div>
+			</div>
+			<div id="new_exercise_manual_div" style="display:none;">
+				<p> Manual</p>
+				<p> Series </p>
+				<a class="button language" id="language_new_exercise_manual_add_serie" href="#new_manual_serie" data-router="section"></a>	
+					<fieldset>
+						<label class="language" id="language_add_serie_manual_comments"></label>
+						<input type="text" id="add_serie_percentage_comments" value=""/>
+					</fieldset>
+			</div>
+			<a class="button language" id="language_new_exercise_back_button" href="#new_routine_step_2" data-router="section"></a>
+			
+			<a class="button language" id="language_new_exercise_add_button" onclick="storeNewRoutineAddExercise();"></a>				
+						
+		    </article>
+		</section>		
+		
+<section id="new_percentage_serie">
+			<header data-title="" class="language" id="language_new_routine_header_title"> 
+				<nav>
+					<a href="#aside" data-router="aside" data-icon="menu"></a>
+				</nav>
+			</header>
+		    <article id="form-normal" class="active">		        
+			
+			<div class="form">
+				<fieldset>
+					<label class="language" id="language_add_serie_percentage_name"></label>
+					<input type="text" id="add_serie_percentage_name" value=""/>
+				</fieldset>	
+				<fieldset>
+					<label class="language" id="language_add_serie_percentage_percentage"></label>
+					<input type="text" id="add_serie_percentage_percentage" value=""/>
+				</fieldset>				
+				<fieldset>
+					<label class="language" id="language_add_serie_percentage_times"></label>
+					<input type="text" id="add_serie_percentage_times" value=""/>
+				</fieldset>
+			</div>
+			<a class="button language" id="language_new_serie_back_button" href="#new_exercise" data-router="section"></a>		
+			<a class="button language" id="language_new_serie_add_button" onclick="storeNewRoutineAddPercentageSerie();" data-router="section"></a>		
+		    </article>
+		</section>			
+		
+<section id="new_manual_serie">
+			<header data-title="" class="language" id="language_new_routine_header_title"> 
+				<nav>
+					<a href="#aside" data-router="aside" data-icon="menu"></a>
+				</nav>
+			</header>
+		    <article id="form-normal" class="active">		        
+			
+			<div class="form">
+				<fieldset>
+					<label class="language" id="language_add_serie_manual_name"></label>
+					<input type="text" id="add_serie_manual_name" value=""/>
+				</fieldset>	
+				<fieldset>
+					<label class="language" id="language_add_serie_manual_kg"></label>
+					<input type="text" id="add_serie_manual_kg" value=""/>
+				</fieldset>				
+				<fieldset>
+					<label class="language" id="language_add_serie_manual_times"></label>
+					<input type="text" id="add_serie_manual_times" value=""/>
+				</fieldset>
+			</div>
+			<a class="button language" id="language_new_serie_manual_back_button" href="#new_exercise" data-router="section"></a>		
+			<a class="button language" id="language_new_serie_manual_add_button" onclick="storeNewRoutineAddManualSerie();" data-router="section"></a>		
+		    </article>
+		</section>					
